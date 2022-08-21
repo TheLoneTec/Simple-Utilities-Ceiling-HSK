@@ -248,124 +248,135 @@
 				</value>
 			</li>
 
-			<li Class="PatchOperationConditional">
-			<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/modExtensions</xpath>
-				<match Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/modExtensions</xpath>
-					<value>
-						<li Class="CeilingUtilities.CeilingFixture" />
-						<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
-							<mirror>False</mirror>
-							<offsetType>Eight</offsetType>
-							<offsets>
-								<li>(0.5, 0, 0.5)</li>
-							</offsets>
-						</li>
-					</value>
+			<li Class="PatchOperationFindMod">
+			<mods>
+				<li>Ideology</li>
+			</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+					<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/modExtensions</xpath>
+						<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/modExtensions</xpath>
+							<value>
+								<li Class="CeilingUtilities.CeilingFixture" />
+								<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
+									<mirror>False</mirror>
+									<offsetType>Eight</offsetType>
+									<offsets>
+										<li>(0.5, 0, 0.5)</li>
+									</offsets>
+								</li>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]</xpath>
+							<value>
+								<modExtensions>
+									<li Class="CeilingUtilities.CeilingFixture" />
+									<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
+										<mirror>False</mirror>
+										<offsetType>Eight</offsetType>
+										<offsets>
+											<li>(0.5, 0, 0.5)</li>
+										</offsets>
+									</li>
+								</modExtensions>
+							</value>
+						</nomatch>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData/texPath</xpath>
+						<value>
+							<texPath>Things/Building/Furniture/CeilingDarkLight</texPath>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData</xpath>
+						<value>
+							<drawSize>(0.5,0.5)</drawSize>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]</xpath>
+						<value>
+							<altitudeLayer>MoteOverhead</altitudeLayer>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData</xpath>
+						<value>
+							<color>(1,1,1,0.35)</color>
+						</value>
+					</li>
+
+					<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/modExtensions</xpath>
+						<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/modExtensions</xpath>
+							<value>
+								<li Class="CeilingUtilities.CeilingFixture" />
+								<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
+									<mirror>False</mirror>
+									<offsetType>Eight</offsetType>
+									<offsets>
+										<li>(0.5, 0, 0.5)</li>
+									</offsets>
+								</li>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]</xpath>
+							<value>
+								<modExtensions>
+									<li Class="CeilingUtilities.CeilingFixture" />
+									<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
+										<mirror>False</mirror>
+										<offsetType>Eight</offsetType>
+										<offsets>
+											<li>(0.5, 0, 0.5)</li>
+										</offsets>
+									</li>
+								</modExtensions>
+							</value>
+						</nomatch>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData/texPath</xpath>
+						<value>
+							<texPath>Things/Building/Furniture/CeilingDarkLight</texPath>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData</xpath>
+						<value>
+							<drawSize>(0.5,0.5)</drawSize>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]</xpath>
+						<value>
+							<altitudeLayer>MoteOverhead</altitudeLayer>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData</xpath>
+						<value>
+							<color>(1,1,1,0.35)</color>
+						</value>
+					</li>
+
+					</operations>
 				</match>
-				<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]</xpath>
-					<value>
-						<modExtensions>
-							<li Class="CeilingUtilities.CeilingFixture" />
-							<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
-								<mirror>False</mirror>
-								<offsetType>Eight</offsetType>
-								<offsets>
-									<li>(0.5, 0, 0.5)</li>
-								</offsets>
-							</li>
-						</modExtensions>
-					</value>
-				</nomatch>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData/texPath</xpath>
-				<value>
-					<texPath>Things/Building/Furniture/CeilingDarkLight</texPath>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData</xpath>
-				<value>
-					<drawSize>(0.5,0.5)</drawSize>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]</xpath>
-				<value>
-					<altitudeLayer>MoteOverhead</altitudeLayer>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData</xpath>
-				<value>
-					<color>(1,1,1,0.35)</color>
-				</value>
-			</li>
-
-			<li Class="PatchOperationConditional">
-			<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/modExtensions</xpath>
-				<match Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/modExtensions</xpath>
-					<value>
-						<li Class="CeilingUtilities.CeilingFixture" />
-						<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
-							<mirror>False</mirror>
-							<offsetType>Eight</offsetType>
-							<offsets>
-								<li>(0.5, 0, 0.5)</li>
-							</offsets>
-						</li>
-					</value>
-				</match>
-				<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]</xpath>
-					<value>
-						<modExtensions>
-							<li Class="CeilingUtilities.CeilingFixture" />
-							<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
-								<mirror>False</mirror>
-								<offsetType>Eight</offsetType>
-								<offsets>
-									<li>(0.5, 0, 0.5)</li>
-								</offsets>
-							</li>
-						</modExtensions>
-					</value>
-				</nomatch>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData/texPath</xpath>
-				<value>
-					<texPath>Things/Building/Furniture/CeilingDarkLight</texPath>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData</xpath>
-				<value>
-					<drawSize>(0.5,0.5)</drawSize>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]</xpath>
-				<value>
-					<altitudeLayer>MoteOverhead</altitudeLayer>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData</xpath>
-				<value>
-					<color>(1,1,1,0.35)</color>
-				</value>
 			</li>
 
 		</operations>
