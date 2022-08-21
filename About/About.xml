@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Simple Utilities: Ceiling HSK</name>
+	<author>Owlchemist</author>
+	<supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<url>https://github.com/Owlchemist/simple-utilities-ceiling</url>
+	<description>Allows the building of ceiling-mounted light fixtures, firefoam poppers, and sun lamps. Also includes dark light variants for Ideology users. The lights come in a variety of styles. Additional functionality is unlock if you have Vanilla Expanded Framework installed, as well as Perspective: Buildings.</description>
+    <packageId>Owlchemist.CeilingUtilities</packageId>
+	<loadAfter>
+		<li>zlj.staticqualityplus</li>
+	</loadAfter>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>
