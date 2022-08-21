@@ -109,6 +109,16 @@
 				</value>
 			</li>
 
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Owl_GloomCeilingLight"]/costList</xpath>
+				<value>
+					<costList Inherit="False">
+						<Owl_GloomlightMinified>1</Owl_GloomlightMinified>
+						<ComponentMedieval>2</ComponentMedieval>
+					</costList>
+				</value>
+			</li>
+
 			<li Class="PatchOperationAdd">
 				<xpath>Defs</xpath>
 				<value>
