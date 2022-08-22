@@ -180,7 +180,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="CeilingLamp"]/graphicData</xpath>
 				<value>
-					<drawSize>(0.5,0.5)</drawSize>
+					<drawSize>(0.8,0.8)</drawSize>
 				</value>
 			</li>
 
@@ -240,7 +240,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="CeilingLEDLamp"]/graphicData</xpath>
 				<value>
-					<drawSize>(0.5,0.5)</drawSize>
+					<drawSize>(0.8,0.8)</drawSize>
 				</value>
 			</li>
 
@@ -307,7 +307,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>Defs/ThingDef[defName="CeilingDarkLamp"]/graphicData</xpath>
 						<value>
-							<drawSize>(0.5,0.5)</drawSize>
+							<drawSize>(0.8,0.8)</drawSize>
 						</value>
 					</li>
 
@@ -367,7 +367,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>Defs/ThingDef[defName="CeilingLEDDarkLamp"]/graphicData</xpath>
 						<value>
-							<drawSize>(0.5,0.5)</drawSize>
+							<drawSize>(0.8,0.8)</drawSize>
 						</value>
 					</li>
 
