@@ -119,6 +119,19 @@
 				</value>
 			</li>
 
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Owl_GloomCeilingLight"]/comps/li[@Class="CompProperties_HeatPusher"]</xpath>
+				<value>
+					<li Class="CompProperties_HeatPusher">
+						<compClass>CompHeatPusherPowered</compClass>
+						<heatPerSecond>2.5</heatPerSecond>
+						<heatPushMaxTemperature>20</heatPushMaxTemperature>
+					</li>
+				</value>
+			</li>
+
+
+
 			<li Class="PatchOperationAdd">
 				<xpath>Defs</xpath>
 				<value>
@@ -133,6 +146,13 @@
 						<designationCategory>Misc</designationCategory>
 						<debug>false</debug>
 					</ArchitectSense.DesignationSubCategoryDef>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Owl_CeilingFirefoamPopper"]/graphicData/color</xpath>
+				<value>
+					<color>(1,1,1,0.35)</color>
 				</value>
 			</li>
 
